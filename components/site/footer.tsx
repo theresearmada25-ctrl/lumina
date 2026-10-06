@@ -96,15 +96,15 @@ export function Footer() {
 
         <div>
           <ColumnTitle>Seguici</ColumnTitle>
-          <ul className="flex flex-wrap gap-3">
+          <ul className="flex flex-nowrap items-center gap-1.5">
             {socials.map(({ label, Icon }) => (
-              <li key={label}>
+              <li key={label} className="shrink-0">
                 <a
                   href="#"
                   aria-label={label}
-                  className="flex size-11 items-center justify-center rounded-full border-2 border-brand text-brand transition-colors hover:bg-brand hover:text-white"
+                  className="flex size-10 items-center justify-center rounded-full border-2 border-brand text-brand transition-colors hover:bg-brand hover:text-white"
                 >
-                  <Icon className="size-5" />
+                  <Icon className="size-[18px]" />
                 </a>
               </li>
             ))}
