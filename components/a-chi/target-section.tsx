@@ -33,7 +33,20 @@ const badges = [
 
 export function TargetSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#f7efe2] to-[#efe2cf]">
+    <section className="relative overflow-hidden bg-[#f3e6d2]">
+      <div className="relative isolate">
+        <Image
+          src="/images/coast-background.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="-z-20 object-cover"
+        />
+        <div
+          className="absolute inset-0 -z-10 bg-gradient-to-b from-[#f7efe2]/85 via-[#f7efe2]/55 to-[#f3e6d2]/75"
+          aria-hidden="true"
+        />
       <div className="mx-auto max-w-6xl px-5 pb-16 pt-12">
         <header className="text-center">
           <p className="flex items-center justify-center gap-4 text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
@@ -52,8 +65,8 @@ export function TargetSection() {
           </p>
         </header>
 
-        <div className="mt-10 grid items-center gap-8 lg:grid-cols-[1fr_1.15fr_0.8fr]">
-          <div className="relative order-2 aspect-square overflow-hidden rounded-3xl shadow-xl lg:order-1">
+        <div className="mt-10 grid items-center gap-6 md:grid-cols-2 lg:grid-cols-[1fr_1.2fr_0.75fr]">
+          <div className="relative order-2 aspect-square overflow-hidden rounded-3xl shadow-2xl ring-4 ring-white/60 lg:order-1">
             <Image
               src="/images/target-sandwich.png"
               alt="Panuozzi farciti con rucola, bresaola e stracciatella accanto a una birra"
@@ -63,12 +76,12 @@ export function TargetSection() {
             />
           </div>
 
-          <div className="order-1 space-y-3 lg:order-2">
+          <div className="order-1 space-y-3 md:col-span-2 lg:order-2 lg:col-span-1">
             <ul className="space-y-3">
               {targets.map(({ Icon, title, text }) => (
                 <li
                   key={title}
-                  className="flex items-start gap-4 rounded-xl bg-[#fbf4e8]/95 p-4 shadow-sm ring-1 ring-[#eadbc4]"
+                  className="flex items-start gap-4 rounded-xl bg-white/90 p-4 shadow-md ring-1 ring-[#eadbc4] backdrop-blur-sm"
                 >
                   <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#f0d9a8] text-[#8a5a17]">
                     <Icon className="size-5" aria-hidden="true" />
@@ -105,16 +118,17 @@ export function TargetSection() {
             </div>
           </div>
 
-          <div className="relative order-3 mx-auto aspect-[3/5] w-full max-w-xs overflow-hidden rounded-2xl">
+          <div className="relative order-3 mx-auto aspect-[3/5] w-full max-w-xs overflow-hidden rounded-2xl shadow-2xl ring-4 ring-white/60">
             <Image
               src="/images/packaging.png"
-              alt="Confezione del Panuozzo Napoletano Il Pagnuozzo"
+              alt="Confezione sottovuoto Il Pagnuozzo, Antica Ricetta Panuozzo Napoletano con lievito madre"
               fill
-              sizes="(min-width: 1024px) 25vw, 60vw"
+              sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 80vw"
               className="object-cover"
             />
           </div>
         </div>
+      </div>
       </div>
 
 <div className="bg-gradient-to-r from-brand-red/60 via-brand-red to-brand-red/60 px-5 py-6">
