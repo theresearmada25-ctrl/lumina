@@ -17,11 +17,23 @@ const footerNav = [
 ]
 
 const socials = [
-  { label: 'LinkedIn', Icon: LinkedinIcon },
-  { label: 'Instagram', Icon: InstagramIcon },
-  { label: 'Facebook', Icon: FacebookIcon },
-  { label: 'YouTube', Icon: YoutubeIcon },
-  { label: 'TikTok', Icon: TiktokIcon },
+  {
+    label: 'LinkedIn',
+    Icon: LinkedinIcon,
+    href: 'https://www.linkedin.com/in/giuseppe-rippa-bb8a4b27/',
+  },
+  {
+    label: 'Instagram',
+    Icon: InstagramIcon,
+    href: 'https://www.instagram.com/ilpagnuozzo.campania/?hl=it',
+  },
+  { label: 'Facebook', Icon: FacebookIcon, href: 'https://www.facebook.com/IlPagnuozzo' },
+  { label: 'YouTube', Icon: YoutubeIcon, href: 'https://www.youtube.com/@ilpagnuozzo.campania' },
+  {
+    label: 'TikTok',
+    Icon: TiktokIcon,
+    href: 'https://www.tiktok.com/@ilpagnuozzo.campania?lang=it-IT',
+  },
 ]
 
 function ColumnTitle({ children }: { children: React.ReactNode }) {
@@ -97,11 +109,13 @@ export function Footer() {
         <div>
           <ColumnTitle>Seguici</ColumnTitle>
           <ul className="flex flex-nowrap items-center gap-1.5">
-            {socials.map(({ label, Icon }) => (
+            {socials.map(({ label, Icon, href }) => (
               <li key={label} className="shrink-0">
                 <a
-                  href="#"
-                  aria-label={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${label} (si apre in una nuova scheda)`}
                   className="flex size-10 items-center justify-center rounded-full border-2 border-brand text-brand transition-colors hover:bg-brand hover:text-white"
                 >
                   <Icon className="size-[18px]" />
