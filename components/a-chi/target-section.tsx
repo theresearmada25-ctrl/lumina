@@ -117,8 +117,8 @@ export function TargetSection() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-transparent via-brand-red to-transparent py-6">
-        <h2 className="text-center font-serif text-3xl font-bold text-cream md:text-5xl">
+<div className="bg-gradient-to-r from-brand-red/60 via-brand-red to-brand-red/60 px-5 py-6">
+          <h2 className="text-balance text-center font-serif text-3xl font-bold text-cream md:text-4xl lg:text-5xl">
           Richiedi il tuo campione gratuito
         </h2>
       </div>

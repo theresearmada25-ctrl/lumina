@@ -30,7 +30,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-8 whitespace-nowrap lg:flex">
           {NAV_LINKS.map((link) => {
             const active = pathname === link.href
             return (
@@ -52,14 +52,14 @@ export function Navbar() {
 
         <Link
           href="/a-chi-e-dedicato#form"
-          className="hidden rounded-full border-2 border-brand px-6 py-2.5 text-[15px] font-bold text-brand transition-colors hover:bg-brand hover:text-white md:inline-flex"
+          className="hidden whitespace-nowrap rounded-full border-2 border-brand px-6 py-2.5 text-[15px] font-bold text-brand transition-colors hover:bg-brand hover:text-white lg:inline-flex"
         >
           {'→ Richiedi il campione'}
         </Link>
 
         <button
           type="button"
-          className="inline-flex size-10 items-center justify-center rounded-full text-espresso md:hidden"
+          className="inline-flex size-10 items-center justify-center rounded-full text-espresso lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
@@ -70,7 +70,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div id="mobile-menu" className="border-t border-border bg-background px-5 pb-6 md:hidden">
+        <div id="mobile-menu" className="border-t border-border bg-background px-5 pb-6 lg:hidden">
           <ul className="flex flex-col gap-1 pt-3">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
